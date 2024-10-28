@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="TestApp.View.ReadRegistersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestApp"
+             xmlns:vm="clr-namespace:TestApp.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="75" d:DesignWidth="300">
+
+    <UserControl.DataContext>
+        <vm:ReadRegistersViewModel />
+    </UserControl.DataContext>
+
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Slave Address" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="20" 
+                 Text="{Binding SlaveAddress}"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Start Register Address" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                 Height="20" Text="{Binding StartRegisterAddress}"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Register Count" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                 Height="20" Text="{Binding RegisterCount}"/>
+    </Grid>
+</UserControl>
