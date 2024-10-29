@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:TestApp.View"
              xmlns:vm="clr-namespace:TestApp.ViewModel"
              mc:Ignorable="d" 
-             d:DesignHeight="75" d:DesignWidth="300">
+             d:DesignHeight="120" d:DesignWidth="300">
 
     <UserControl.DataContext>
         <vm:WriteRegistersViewModel />
@@ -14,24 +14,24 @@
 
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"></RowDefinition>
-            <RowDefinition Height="25"></RowDefinition>
-            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="6*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="0" Content="Slave Address" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <Label Grid.Row="0" Grid.Column="0" Content="Slave Address" HorizontalAlignment="Stretch" VerticalAlignment="Center" HorizontalContentAlignment="Left"/>
         <TextBox Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="20" 
                  Text="{Binding SlaveAddress}"/>
 
-        <Label Grid.Row="1" Grid.Column="0" Content="Start Register Address" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Start Register Address" FontSize="9" HorizontalAlignment="Stretch" VerticalAlignment="Center" HorizontalContentAlignment="Left"/>
         <TextBox Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Center" 
                  Height="20" Text="{Binding StartRegisterAddress}"/>
 
-        <Label Grid.Row="2" Grid.Column="0" Content="Values" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="Values" HorizontalAlignment="Stretch" VerticalAlignment="Center" HorizontalContentAlignment="Left"/>
         <TextBox Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Center" 
                  Height="20" Text="{Binding Values}"/>
     </Grid>
